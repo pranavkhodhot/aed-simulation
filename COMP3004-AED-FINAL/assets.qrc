@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>img/Asystole.png</file>
+        <file>img/Blank.png</file>
+        <file>img/PEA.png</file>
+        <file>img/VF.png</file>
+        <file>img/VT.png</file>
+    </qresource>
+</RCC>

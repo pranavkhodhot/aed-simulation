@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>887</width>
+    <height>474</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <layout class="QVBoxLayout" name="settings">
+      <item>
+       <widget class="QGroupBox" name="powerOptions">
+        <property name="title">
+         <string>Power Options</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <widget class="QPushButton" name="powerButton">
+           <property name="text">
+            <string>Power On</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="changeBatteries">
+           <property name="text">
+            <string>Charge and Reset</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="batteryLabel">
+           <property name="text">
+            <string>Battery Level</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QProgressBar" name="batteryLevel">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="autoFillBackground">
+            <bool>true</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="value">
+            <number>100</number>
+           </property>
+           <property name="textVisible">
+            <bool>true</bool>
+           </property>
+           <property name="invertedAppearance">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="simOptions">
+        <property name="title">
+         <string>Simulation Options</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QCheckBox" name="autoSim">
+             <property name="text">
+              <string>Auto Simulation</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="runSim">
+             <property name="text">
+              <string>Run</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="simulatedScenarios">
+           <property name="title">
+            <string>Simulated Scenarios</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_7">
+            <item>
+             <widget class="QPushButton" name="resetSimButton">
+              <property name="text">
+               <string>Reset (Blank)</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="peaButton">
+              <property name="text">
+               <string>PEA</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="asystoleButton">
+              <property name="text">
+               <string>Asystole</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="vfButton">
+              <property name="text">
+               <string>VF</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="vtButton">
+              <property name="text">
+               <string>VT</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="display">
+      <property name="title">
+       <string>Display</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Electrocardiogram Display</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="ECG">
+         <property name="styleSheet">
+          <string notr="true">color : red;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lcdDisplay">
+         <property name="styleSheet">
+          <string notr="true">background-color: #cae5ba;
+color: #172f15;
+font-weight: bold;
+border: 2px solid #000000;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextBrowser" name="logBox"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="controlPanel">
+      <property name="title">
+       <string>Control Panel</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_7">
+         <item>
+          <widget class="QComboBox" name="padSelector">
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <property name="placeholderText">
+            <string>Select Type</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>Adult</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Child</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="electrodeCheckbox">
+           <property name="text">
+            <string>Electrodes Placed</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Compression Depth</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QScrollBar" name="compressionDepth">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(51, 209, 122);
+selection-color: rgb(87, 227, 137);</string>
+           </property>
+           <property name="maximum">
+            <number>4</number>
+           </property>
+           <property name="pageStep">
+            <number>1</number>
+           </property>
+           <property name="sliderPosition">
+            <number>2</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="invertedAppearance">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="shockMenu">
+         <item row="2" column="0" rowspan="2" colspan="2">
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>Shocks</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLCDNumber" name="lcdNumber">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #cae5ba;
+background-color: rgb(141, 159, 129);
+color: #172f15;
+font-weight: bold;
+border: 2px solid #000000;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QPushButton" name="pushButton">
+           <property name="text">
+            <string>Perform CPR</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QPushButton" name="deliverShock">
+           <property name="text">
+            <string>Deliver Shock</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
